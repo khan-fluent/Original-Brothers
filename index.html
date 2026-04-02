@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orignal Brothers Pizza — Authentic, handcrafted pizza made with love. Visit us today.">
+  <title>Orignal Brothers Pizza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">Orignal Brothers</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#location">Visit</a></li>
+        <li><a href="tel:+15551234567" class="nav__cta">Call to Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__tagline">Est. 2025</p>
+      <h1 class="hero__title">Pizza Made<br>the Right Way</h1>
+      <p class="hero__subtitle">Handcrafted with fresh ingredients and family tradition</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">View Our Menu</a>
+        <a href="tel:+15551234567" class="btn btn--outline">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Our Story</p>
+        <h2 class="section__title">A Family Tradition</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>
+            At Orignal Brothers, every pizza tells a story. We started with a simple
+            belief: great pizza comes from fresh ingredients, time-honored recipes,
+            and a passion for the craft.
+          </p>
+          <p>
+            From our hand-tossed dough made fresh daily to our slow-simmered sauce,
+            every detail matters. We don't cut corners — we cut pizza.
+          </p>
+        </div>
+        <div class="about__image">
+          <div class="about__image-placeholder">
+            <!-- Replace with: <img src="assets/images/about.jpg" alt="Our kitchen"> -->
+            <span>Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What We Serve</p>
+        <h2 class="section__title">Our Menu</h2>
+      </div>
+
+      <div class="menu__categories">
+        <button class="menu__tab active" data-category="pizzas">Pizzas</button>
+        <button class="menu__tab" data-category="sides">Sides</button>
+        <button class="menu__tab" data-category="drinks">Drinks</button>
+      </div>
+
+      <div class="menu__items" id="menu-items">
+        <!-- Pizzas -->
+        <div class="menu__category active" data-category="pizzas">
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>The Classic Margherita</h3>
+              <p>San Marzano tomato sauce, fresh mozzarella, basil, extra virgin olive oil</p>
+            </div>
+            <span class="menu__price">$14</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Pepperoni</h3>
+              <p>Tomato sauce, mozzarella, crispy cup pepperoni</p>
+            </div>
+            <span class="menu__price">$16</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>The Brothers Special</h3>
+              <p>Sausage, roasted peppers, caramelized onion, garlic, fresh mozzarella</p>
+            </div>
+            <span class="menu__price">$18</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>White Pie</h3>
+              <p>Ricotta, mozzarella, garlic, olive oil, fresh herbs</p>
+            </div>
+            <span class="menu__price">$16</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>BBQ Chicken</h3>
+              <p>Smoky BBQ sauce, grilled chicken, red onion, cilantro, smoked gouda</p>
+            </div>
+            <span class="menu__price">$17</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Veggie Supreme</h3>
+              <p>Mushrooms, bell peppers, olives, artichoke hearts, tomato, fresh basil</p>
+            </div>
+            <span class="menu__price">$16</span>
+          </div>
+        </div>
+
+        <!-- Sides -->
+        <div class="menu__category" data-category="sides">
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Garlic Knots</h3>
+              <p>Fresh-baked, tossed in garlic butter and parmesan</p>
+            </div>
+            <span class="menu__price">$6</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Caesar Salad</h3>
+              <p>Romaine, house-made croutons, parmesan, classic Caesar dressing</p>
+            </div>
+            <span class="menu__price">$9</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Mozzarella Sticks</h3>
+              <p>Hand-breaded, served with marinara</p>
+            </div>
+            <span class="menu__price">$8</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Wings</h3>
+              <p>Crispy fried, choice of buffalo, garlic parm, or BBQ</p>
+            </div>
+            <span class="menu__price">$11</span>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="menu__category" data-category="drinks">
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Fountain Drinks</h3>
+              <p>Coke, Diet Coke, Sprite, Lemonade</p>
+            </div>
+            <span class="menu__price">$3</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Italian Soda</h3>
+              <p>Sparkling water with your choice of flavor</p>
+            </div>
+            <span class="menu__price">$4</span>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-info">
+              <h3>Craft Beer</h3>
+              <p>Rotating selection of local brews — ask your server</p>
+            </div>
+            <span class="menu__price">$7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location section" id="location">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Find Us</p>
+        <h2 class="section__title">Come Visit</h2>
+      </div>
+      <div class="location__grid">
+        <div class="location__info">
+          <div class="location__card">
+            <h3>Address</h3>
+            <p>123 Main Street<br>Your City, ST 12345</p>
+          </div>
+          <div class="location__card">
+            <h3>Hours</h3>
+            <p>
+              Mon – Thu: 11am – 10pm<br>
+              Fri – Sat: 11am – 11pm<br>
+              Sunday: 12pm – 9pm
+            </p>
+          </div>
+          <div class="location__card">
+            <h3>Contact</h3>
+            <p>
+              <a href="tel:+15551234567">(555) 123-4567</a><br>
+              <a href="mailto:hello@orignalbrothers.com">hello@orignalbrothers.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="location__map">
+          <div class="location__map-placeholder">
+            <!-- Replace with a Google Maps embed -->
+            <span>Map</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Orignal Brothers</p>
+        <p class="footer__tagline">Pizza made the right way.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#location">Visit</a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Orignal Brothers Pizza. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
