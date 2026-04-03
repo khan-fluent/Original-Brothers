@@ -22,6 +22,27 @@ navLinks.addEventListener('click', (e) => {
   }
 });
 
+// ---- Cycling hero title ----
+
+const titleA = document.getElementById('title-a');
+const titleB = document.getElementById('title-b');
+let showingA = true;
+
+setInterval(() => {
+  const current = showingA ? titleA : titleB;
+  const next = showingA ? titleB : titleA;
+
+  current.classList.add('hero__title-line--out');
+  current.classList.remove('hero__title-line--active');
+
+  setTimeout(() => {
+    current.classList.remove('hero__title-line--out');
+    next.classList.add('hero__title-line--active');
+    showingA = !showingA;
+  }, 800);
+}, 4000);
+
+
 // ---- Rotating hero tagline ----
 
 const rotatingEl = document.getElementById('hero-rotating');

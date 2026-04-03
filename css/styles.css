@@ -166,14 +166,14 @@ img {
 }
 
 .btn--primary {
-  background-color: var(--italia-green);
+  background-color: var(--italia-red);
   color: var(--color-white);
-  border: 2px solid var(--italia-green);
+  border: 2px solid var(--italia-red);
 }
 
 .btn--primary:hover {
   background: transparent;
-  color: var(--italia-green);
+  color: var(--italia-red);
   transform: translateY(-2px);
 }
 
@@ -207,7 +207,7 @@ img {
   background: rgba(20, 20, 19, 0.95);
   backdrop-filter: blur(12px);
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(192, 57, 43, 0.15);
 }
 
 .nav__inner {
@@ -252,15 +252,15 @@ img {
 
 .nav__cta {
   padding: 0.5rem 1.25rem;
-  border: 1.5px solid var(--color-gold);
-  color: var(--color-gold) !important;
+  border: 1.5px solid var(--italia-red);
+  color: var(--italia-red) !important;
   font-weight: 500 !important;
   transition: all var(--transition) !important;
 }
 
 .nav__cta:hover {
-  background: var(--color-gold);
-  color: var(--color-black) !important;
+  background: var(--italia-red);
+  color: var(--color-white) !important;
 }
 
 /* Hamburger */
@@ -323,7 +323,7 @@ img {
   font-size: 0.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--italia-red);
   margin-bottom: var(--space-md);
 }
 
@@ -335,6 +335,32 @@ img {
   line-height: 1.05;
   margin-bottom: var(--space-sm);
   letter-spacing: -1px;
+  position: relative;
+  min-height: 2.2em;
+}
+
+/* Cycling title lines */
+.hero__title-line {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero__title-line--active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+.hero__title-line--out {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 
 .hero__subtitle {
@@ -346,14 +372,33 @@ img {
   letter-spacing: 0.5px;
 }
 
-/* Thin elegant line below subtitle */
+/* Animated gradient line below subtitle */
 .hero__subtitle::after {
   content: '';
   display: block;
-  width: 40px;
-  height: 1px;
-  background: var(--color-gold);
+  width: 60px;
+  height: 2px;
   margin: var(--space-md) auto 0;
+  background: linear-gradient(90deg, var(--italia-green), var(--italia-red), var(--italia-green));
+  background-size: 200% 100%;
+  animation: gradientSlide 3s ease-in-out infinite;
+}
+
+@keyframes gradientSlide {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Red brand stripe at very top of page */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--italia-green), var(--italia-red));
+  z-index: 1001;
 }
 
 .hero__rotating {
@@ -781,7 +826,7 @@ img {
 
 .proof__stars {
   font-size: 1.2rem;
-  color: var(--color-gold);
+  color: var(--italia-red);
   margin-bottom: 1rem;
   letter-spacing: 3px;
 }
@@ -1029,13 +1074,13 @@ img {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-white);
-  background: var(--italia-green);
+  background: var(--italia-red);
   transition: all var(--transition);
 }
 
 .mobile-order__btn:hover {
   color: var(--color-white);
-  background: var(--color-green, #2d5e3a);
+  background: #a5321f;
 }
 
 /* ============================================
