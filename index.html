@@ -15,7 +15,9 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#" class="nav__logo">Orignal Brothers</a>
+      <a href="#" class="nav__logo">
+        <img src="assets/images/navbar-logo.png" alt="Original Brothers Pizza" class="nav__logo-img">
+      </a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -25,217 +27,431 @@
         <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#location">Visit</a></li>
-        <li><a href="tel:+15551234567" class="nav__cta">Call to Order</a></li>
+        <li><a href="https://www.ubereats.com/store/original-brothers-pizza-640-conduit-boulevard/TEptS0beWfGSsPCClub0eg" target="_blank" rel="noopener noreferrer" class="nav__cta">Order Online</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero -->
   <header class="hero" id="hero">
+    <div class="hero__particles" aria-hidden="true">
+      <!-- Sparks -->
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <!-- Smoke -->
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <!-- Flour dust -->
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+      <span class="dust"></span>
+    </div>
     <div class="hero__overlay"></div>
     <div class="container hero__content">
-      <p class="hero__tagline">Est. 2025</p>
+      <p class="hero__tagline">Est. 2025 &bull; Brooklyn, NY</p>
       <h1 class="hero__title">Pizza Made<br>the Right Way</h1>
       <p class="hero__subtitle">Handcrafted with fresh ingredients and family tradition</p>
+      <p class="hero__rotating" id="hero-rotating"></p>
       <div class="hero__actions">
-        <a href="#menu" class="btn btn--primary">View Our Menu</a>
-        <a href="tel:+15551234567" class="btn btn--outline">Order Now</a>
+        <a href="https://www.ubereats.com/store/original-brothers-pizza-640-conduit-boulevard/TEptS0beWfGSsPCClub0eg" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Order Online</a>
+        <a href="#menu" class="btn btn--outline">View Our Menu</a>
+        <a href="tel:+17185340875" class="btn btn--outline">Call to Order</a>
       </div>
     </div>
   </header>
 
+  <div class="fire-divider"></div>
+
   <!-- About -->
   <section class="about section" id="about">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">Our Story</p>
-        <h2 class="section__title">A Family Tradition</h2>
-      </div>
-      <div class="about__grid">
+      <div class="about__grid reveal">
         <div class="about__text">
+          <p class="section__label">Our Story</p>
+          <h2 class="section__title" style="text-align: left;">A Family Tradition</h2>
           <p>
-            At Orignal Brothers, every pizza tells a story. We started with a simple
-            belief: great pizza comes from fresh ingredients, time-honored recipes,
-            and a passion for the craft.
+            Led by head chef Ash, who's been making pizza for over 15 years,
+            Original Brothers is built on real experience and real craft. Ash grew up
+            in a legendary pizza shop, learning from the greats — picking up
+            techniques, secrets, and a standard for quality that most places
+            can't touch.
           </p>
           <p>
             From our hand-tossed dough made fresh daily to our slow-simmered sauce,
             every detail matters. We don't cut corners — we cut pizza.
           </p>
+          <img src="assets/images/logo.png" alt="Original Brothers Pizza" class="about__logo">
         </div>
-        <div class="about__image">
-          <div class="about__image-placeholder">
-            <!-- Replace with: <img src="assets/images/about.jpg" alt="Our kitchen"> -->
-            <span>Photo</span>
-          </div>
+        <div class="about__video">
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@original.brothers1/video/7621045360940649742"
+            data-video-id="7621045360940649742"
+            style="max-width: 100%; min-width: 280px; margin: 0;">
+            <section></section>
+          </blockquote>
+          <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="fire-divider"></div>
 
   <!-- Menu -->
   <section class="menu section" id="menu">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header reveal">
         <p class="section__label">What We Serve</p>
         <h2 class="section__title">Our Menu</h2>
       </div>
 
-      <div class="menu__categories">
+      <div class="menu__categories reveal">
         <button class="menu__tab active" data-category="pizzas">Pizzas</button>
-        <button class="menu__tab" data-category="sides">Sides</button>
-        <button class="menu__tab" data-category="drinks">Drinks</button>
+        <button class="menu__tab" data-category="slices">Slices</button>
+        <button class="menu__tab" data-category="appetizers">Appetizers</button>
+        <button class="menu__tab" data-category="salads">Salads</button>
+        <button class="menu__tab" data-category="entrees">Burgers &amp; Sandwiches</button>
+        <button class="menu__tab" data-category="pasta">Pasta</button>
+        <button class="menu__tab" data-category="desserts">Desserts &amp; Drinks</button>
+        <button class="menu__tab" data-category="deals">Deals</button>
       </div>
 
       <div class="menu__items" id="menu-items">
-        <!-- Pizzas -->
+
+        <!-- ===== PIZZAS (Whole Pies) ===== -->
         <div class="menu__category active" data-category="pizzas">
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>The Classic Margherita</h3>
-              <p>San Marzano tomato sauce, fresh mozzarella, basil, extra virgin olive oil</p>
-            </div>
-            <span class="menu__price">$14</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Pepperoni</h3>
-              <p>Tomato sauce, mozzarella, crispy cup pepperoni</p>
-            </div>
-            <span class="menu__price">$16</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>The Brothers Special</h3>
-              <p>Sausage, roasted peppers, caramelized onion, garlic, fresh mozzarella</p>
-            </div>
-            <span class="menu__price">$18</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>White Pie</h3>
-              <p>Ricotta, mozzarella, garlic, olive oil, fresh herbs</p>
-            </div>
-            <span class="menu__price">$16</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>BBQ Chicken</h3>
-              <p>Smoky BBQ sauce, grilled chicken, red onion, cilantro, smoked gouda</p>
-            </div>
-            <span class="menu__price">$17</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Veggie Supreme</h3>
-              <p>Mushrooms, bell peppers, olives, artichoke hearts, tomato, fresh basil</p>
-            </div>
-            <span class="menu__price">$16</span>
+
+          <!-- Sizing table -->
+          <table class="menu__table">
+            <thead>
+              <tr>
+                <th>Pie</th>
+                <th>Small</th>
+                <th>Medium</th>
+                <th>Large</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Classics -->
+              <tr><td>Regular Cheese</td><td>$9</td><td>$15</td><td>$18</td></tr>
+              <tr><td>Pepperoni</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <tr><td>Sausage</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <tr><td>Meatball</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <tr><td>Mushrooms</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <tr><td>Red Pepper</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <tr><td>Eggplant</td><td>$14</td><td>$20</td><td>$23</td></tr>
+              <!-- Specialty Pies -->
+              <tr><td>White</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr>
+                <td>7th Ave Pizza<br><span class="menu__desc">Fresh mozzarella, caramelized onion, sauce, Mike's hot honey, ricotta cheese &amp; red chili pepper</span></td>
+                <td>—</td><td>$23</td><td>$30</td>
+              </tr>
+              <tr><td>Vodka Pie</td><td>—</td><td>$23</td><td>$30</td></tr>
+              <tr>
+                <td>M.V.P Pie<br><span class="menu__desc">Marinara, vodka, pesto with fresh mozzarella</span></td>
+                <td>—</td><td>$23</td><td>$30</td>
+              </tr>
+              <tr><td>Spicy Vodka Pepperoni</td><td>—</td><td>$23</td><td>$30</td></tr>
+              <tr><td>Grandma Pie</td><td colspan="2" class="menu__only">Only Large</td><td>$25</td></tr>
+              <tr><td>Sicilian Pie</td><td colspan="2" class="menu__only">Only Large</td><td>$30</td></tr>
+              <tr>
+                <td>Honey Roni Square Pie<br><span class="menu__desc">Fresh mozzarella, fresh garlic, pepperoni, ricotta cheese, pecorino romano &amp; Mike's hot honey</span></td>
+                <td colspan="2" class="menu__only">Only Large</td><td>$35</td>
+              </tr>
+              <tr><td>Margherita Pie</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr><td>Chicken Parmigiana</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr><td>Buffalo Chicken</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr><td>Barbecue Chicken</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr><td>Eggplant Pesto</td><td>$16</td><td>$23</td><td>$28</td></tr>
+              <tr>
+                <td>Supreme Special<br><span class="menu__desc">Mushroom, Peppers, Onion, Pepperoni, Sausage</span></td>
+                <td>$16</td><td>$23</td><td>$28</td>
+              </tr>
+              <tr>
+                <td>Veggie<br><span class="menu__desc">Peppers, Onion, Mushroom, Broccoli</span></td>
+                <td>$16</td><td>$23</td><td>$28</td>
+              </tr>
+              <tr>
+                <td>Meat Lover's<br><span class="menu__desc">Pepperoni, Meatballs, Sausage</span></td>
+                <td>$16</td><td>$23</td><td>$28</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="menu__note">
+            <h4>Toppings</h4>
+            <p>Full Topping $6 &nbsp;|&nbsp; Half Topping $3</p>
+            <p class="menu__desc">Mushroom, Olives, Onions, Peppers, Broccoli, Pepperoni, Sausage, Meatball, Bacon, Jalapeno, Pineapple, Ricotta Cheese</p>
           </div>
         </div>
 
-        <!-- Sides -->
-        <div class="menu__category" data-category="sides">
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Garlic Knots</h3>
-              <p>Fresh-baked, tossed in garlic butter and parmesan</p>
-            </div>
-            <span class="menu__price">$6</span>
+        <!-- ===== PIZZA BY SLICE ===== -->
+        <div class="menu__category" data-category="slices">
+          <div class="menu__item"><div class="menu__item-info"><h3>Regular Slice</h3></div><span class="menu__price">$2.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pepperoni</h3></div><span class="menu__price">$4.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Sicilian</h3></div><span class="menu__price">$4.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Grandma</h3></div><span class="menu__price">$3.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>White Slice</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Vegetable Slice</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Parm</h3></div><span class="menu__price">$5.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Buffalo Chicken</h3></div><span class="menu__price">$5.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Barbecue Chicken</h3></div><span class="menu__price">$5.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Bacon Ranch</h3></div><span class="menu__price">$6.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Eggplant Pesto</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Caesar</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>7th Ave</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Margherita</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>M.V.P</h3></div><span class="menu__price">$6.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Caprese</h3></div><span class="menu__price">$6.00</span></div>
+        </div>
+
+        <!-- ===== APPETIZERS ===== -->
+        <div class="menu__category" data-category="appetizers">
+          <div class="menu__item"><div class="menu__item-info"><h3>French Fries</h3></div><span class="menu__price">$4.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Onion Rings</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Wings (10 pc)</h3><p>Barbecue, buffalo, mango habanero, garlic parm, teriyaki</p></div><span class="menu__price">$13.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Tenders (5 pc)</h3></div><span class="menu__price">$9.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Beef Patties Plain</h3></div><span class="menu__price">$3.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Beef Patties w/ Cheese</h3></div><span class="menu__price">$5.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Beef Patties w/ Cheese &amp; Pepperoni</h3></div><span class="menu__price">$6.50</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Beef Patties w/ Cheese, Pepperoni &amp; Coco Bread</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Mozzarella Sticks (12 pc)</h3></div><span class="menu__price">$10.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Garlic Bread</h3></div><span class="menu__price">$3.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Garlic Bread with Cheese</h3></div><span class="menu__price">$6.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Garlic Knots (5 pc)</h3></div><span class="menu__price">$4.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pepperoni Roll</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Buffalo Chicken Rolls</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Barbeque Chicken Rolls</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Rolls</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Spinach Rolls</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Knish</h3></div><span class="menu__price">$4.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheese French Fries</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Fried Zucchini Sticks</h3></div><span class="menu__price">$7.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Buffalo Chicken Pinwheels</h3></div><span class="menu__price">$4.00</span></div>
+        </div>
+
+        <!-- ===== SALADS ===== -->
+        <div class="menu__category" data-category="salads">
+          <div class="menu__note">
+            <p class="menu__desc">Choice of dressing: Ranch, Blue Cheese, Creamy Italian, Caesar</p>
           </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Caesar Salad</h3>
-              <p>Romaine, house-made croutons, parmesan, classic Caesar dressing</p>
-            </div>
-            <span class="menu__price">$9</span>
+          <div class="menu__item"><div class="menu__item-info"><h3>Garden Salad</h3></div><span class="menu__price">$9.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Garden Salad with Grilled Chicken</h3></div><span class="menu__price">$13.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Caesar Salad</h3></div><span class="menu__price">$9.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Caesar Salad with Grilled Chicken</h3></div><span class="menu__price">$13.00</span></div>
+        </div>
+
+        <!-- ===== BURGERS & SANDWICHES ===== -->
+        <div class="menu__category" data-category="entrees">
+
+          <h3 class="menu__subheading">Burgers</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Ham Burger</h3></div><span class="menu__price">$8.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheese Burger</h3></div><span class="menu__price">$9.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheese Burger Deluxe</h3></div><span class="menu__price">$12.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Ham Burger Deluxe</h3></div><span class="menu__price">$12.00</span></div>
+
+          <h3 class="menu__subheading">Calzones</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheese Calzone</h3></div><span class="menu__price">$9.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Meat Calzone</h3></div><span class="menu__price">$13.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Calzone</h3></div><span class="menu__price">$15.00</span></div>
+
+          <h3 class="menu__subheading">Cheesesteak Sandwiches</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Beef Cheesesteak</h3></div><span class="menu__price">$10.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Cheesesteak</h3></div><span class="menu__price">$10.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheesesteak Special</h3><p>Peppers, Onion, Mushroom, Jalapeno, Lettuce, Tomatoes</p></div><span class="menu__price">$12.00</span></div>
+          <div class="menu__note"><p class="menu__desc">Each additional topping $1.00 extra</p></div>
+
+          <h3 class="menu__subheading">Hot Heroes</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Meatball Parmigiana</h3></div><span class="menu__price">$12.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Eggplant Parmigiana</h3></div><span class="menu__price">$12.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Cutlet Parmigiana</h3></div><span class="menu__price">$14.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Shrimp Parmigiana</h3></div><span class="menu__price">$15.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Sausage, Pepper &amp; Onions</h3></div><span class="menu__price">$15.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Chicken Cutlet with Vodka Sauce</h3></div><span class="menu__price">$16.00</span></div>
+        </div>
+
+        <!-- ===== PASTA ===== -->
+        <div class="menu__category" data-category="pasta">
+          <div class="menu__note">
+            <p class="menu__desc">Choice of: Linguine, Spaghetti, Fettucine, Penne</p>
+            <p class="menu__desc">Add Chicken $4 &nbsp;|&nbsp; Add Shrimp $5 &nbsp;|&nbsp; Add Vegetable $2.50</p>
           </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Mozzarella Sticks</h3>
-              <p>Hand-breaded, served with marinara</p>
-            </div>
-            <span class="menu__price">$8</span>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Marinara Sauce</h3></div><span class="menu__price">$14.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Garlic &amp; Oil</h3></div><span class="menu__price">$14.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta w/ Garlic, Oil, Broccoli &amp; Chicken</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Meatball</h3></div><span class="menu__price">$17.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Baked Ziti</h3></div><span class="menu__price">$15.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Baked Ziti with Meat Sauce</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Lasagna</h3></div><span class="menu__price">$16.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Stuffed Shells</h3></div><span class="menu__price">$16.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Chicken Cutlet</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Shrimp Marinara</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Fettucine Alfredo</h3></div><span class="menu__price">$16.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Fettucine Alfredo w/ Chicken</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Fettucine Alfredo w/ Shrimp</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Penne with Vodka Sauce</h3></div><span class="menu__price">$15.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Penne with Vodka Sauce &amp; Chicken</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Penne with Vodka Sauce &amp; Shrimp</h3></div><span class="menu__price">$19.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Pasta with Eggplant</h3></div><span class="menu__price">$17.00</span></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Baked Ravioli</h3></div><span class="menu__price">$16.00</span></div>
+        </div>
+
+        <!-- ===== DESSERTS & DRINKS ===== -->
+        <div class="menu__category" data-category="desserts">
+          <h3 class="menu__subheading">Sicily Desserts</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cheesecake</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Tiramisu</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Cannoli</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Limoncello Cake</h3></div></div>
+
+          <h3 class="menu__subheading">Beverages</h3>
+          <div class="menu__item"><div class="menu__item-info"><h3>Can Soda</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Snapple</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>Water</h3></div></div>
+          <div class="menu__item"><div class="menu__item-info"><h3>2L Soda</h3></div></div>
+        </div>
+
+        <!-- ===== DEALS ===== -->
+        <div class="menu__category" data-category="deals">
+          <div class="menu__deal">
+            <h3>Coupon #1 — <span class="menu__price-highlight">$38</span></h3>
+            <ul>
+              <li>1 Large Pie</li>
+              <li>10 Pc Wings</li>
+              <li>5 Pc Garlic Knots</li>
+              <li>1 2L Soda</li>
+            </ul>
           </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Wings</h3>
-              <p>Crispy fried, choice of buffalo, garlic parm, or BBQ</p>
-            </div>
-            <span class="menu__price">$11</span>
+          <div class="menu__deal">
+            <h3>Coupon #2 — <span class="menu__price-highlight">$58</span></h3>
+            <ul>
+              <li>2 Large Pies (1 plain, 1 with topping)</li>
+              <li>10 Pc Wings</li>
+              <li>5 Pc Garlic Knots</li>
+              <li>1 2L Soda</li>
+            </ul>
+          </div>
+          <div class="menu__deal">
+            <h3>Coupon #3 — <span class="menu__price-highlight">$110</span></h3>
+            <ul>
+              <li>3 Large Pies (1 plain, 2 with topping)</li>
+              <li>15 Pc Wings</li>
+              <li>10 Pc Garlic Knots</li>
+              <li>10 Pc Mozzarella Sticks</li>
+              <li>1 Garden Salad</li>
+              <li>2 2L Sodas</li>
+            </ul>
+          </div>
+          <div class="menu__note">
+            <h4>Pick Your Toppings for Coupons</h4>
+            <p class="menu__desc">Pepperoni, Sausage, Pepper, Mushroom, Onions, Extra Cheese</p>
           </div>
         </div>
 
-        <!-- Drinks -->
-        <div class="menu__category" data-category="drinks">
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Fountain Drinks</h3>
-              <p>Coke, Diet Coke, Sprite, Lemonade</p>
-            </div>
-            <span class="menu__price">$3</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Italian Soda</h3>
-              <p>Sparkling water with your choice of flavor</p>
-            </div>
-            <span class="menu__price">$4</span>
-          </div>
-          <div class="menu__item">
-            <div class="menu__item-info">
-              <h3>Craft Beer</h3>
-              <p>Rotating selection of local brews — ask your server</p>
-            </div>
-            <span class="menu__price">$7</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
+  <div class="fire-divider"></div>
+
+  <!-- Featured Post -->
+  <section class="featured section">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">From Our Kitchen</p>
+        <h2 class="section__title">See What's Cooking</h2>
+      </div>
+      <div class="featured__embed reveal">
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@original.brothers1/photo/7615539972489121038"
+          data-video-id="7615539972489121038"
+          style="max-width: 605px; min-width: 325px; margin: 0 auto;">
+          <section></section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <div class="fire-divider"></div>
+
   <!-- Location -->
   <section class="location section" id="location">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header reveal">
         <p class="section__label">Find Us</p>
         <h2 class="section__title">Come Visit</h2>
       </div>
-      <div class="location__grid">
-        <div class="location__info">
+      <div class="location__grid reveal">
+        <div class="location__info reveal-children">
           <div class="location__card">
             <h3>Address</h3>
-            <p>123 Main Street<br>Your City, ST 12345</p>
+            <p>640 Conduit Blvd<br>Brooklyn, NY 11208</p>
+            <div class="location__directions">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=640+Conduit+Blvd,+Brooklyn,+NY+11208" target="_blank" rel="noopener noreferrer">Google Maps</a>
+              <a href="https://maps.apple.com/?daddr=640+Conduit+Blvd,+Brooklyn,+NY+11208" target="_blank" rel="noopener noreferrer">Apple Maps</a>
+              <a href="https://waze.com/ul?q=640+Conduit+Blvd,+Brooklyn,+NY+11208&navigate=yes" target="_blank" rel="noopener noreferrer">Waze</a>
+            </div>
           </div>
           <div class="location__card">
             <h3>Hours</h3>
             <p>
-              Mon – Thu: 11am – 10pm<br>
-              Fri – Sat: 11am – 11pm<br>
-              Sunday: 12pm – 9pm
+              Open Daily: 11am – 11pm
             </p>
           </div>
           <div class="location__card">
             <h3>Contact</h3>
             <p>
-              <a href="tel:+15551234567">(555) 123-4567</a><br>
-              <a href="mailto:hello@orignalbrothers.com">hello@orignalbrothers.com</a>
+              <a href="tel:+17185340875">(718) 534-0875</a>
             </p>
+          </div>
+          <div class="location__card">
+            <h3>Follow Us</h3>
+            <div class="location__socials">
+              <a href="https://www.instagram.com/originalbrotherspizza_eny/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.tiktok.com/@original.brothers1" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a href="https://maps.app.goo.gl/5peFGCSWxKeNonsh7" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+            </div>
           </div>
         </div>
         <div class="location__map">
-          <div class="location__map-placeholder">
-            <!-- Replace with a Google Maps embed -->
-            <span>Map</span>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.5!2d-73.8753!3d40.6678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25d3a5c4a1c4f%3A0x0!2s640+Conduit+Blvd%2C+Brooklyn%2C+NY+11208!5e0!3m2!1sen!2sus!4v1"
+            width="100%"
+            height="100%"
+            style="border:0; border-radius: 8px; min-height: 350px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Original Brothers Pizza location">
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer__inner reveal">
       <div class="footer__brand">
         <p class="footer__logo">Orignal Brothers</p>
         <p class="footer__tagline">Pizza made the right way.</p>
@@ -244,6 +460,8 @@
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#location">Visit</a>
+        <a href="https://www.instagram.com/originalbrotherspizza_eny/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@original.brothers1" target="_blank" rel="noopener noreferrer">TikTok</a>
       </div>
       <p class="footer__copy">&copy; 2025 Orignal Brothers Pizza. All rights reserved.</p>
     </div>
