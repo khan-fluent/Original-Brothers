@@ -371,6 +371,8 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 12vh;
+  padding-bottom: 4rem;
   overflow: hidden;
   /* Brick pattern */
   background:
