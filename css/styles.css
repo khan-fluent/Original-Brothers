@@ -184,13 +184,13 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 0.9rem 2.2rem;
+  padding: 0.9rem 2.4rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all var(--transition);
 }
@@ -324,7 +324,7 @@ img {
 .nav__cta {
   padding: 0.6rem 1.4rem;
   border: 1.5px solid var(--color-gold);
-  border-radius: var(--radius);
+  border-radius: 50px;
   color: var(--color-gold) !important;
   font-weight: 500 !important;
 }
@@ -833,7 +833,7 @@ img {
   color: var(--color-text-muted);
   background: transparent;
   border: 1.5px solid transparent;
-  border-radius: var(--radius);
+  border-radius: 50px;
   cursor: pointer;
   transition: all var(--transition);
   white-space: nowrap;
@@ -1199,7 +1199,7 @@ img {
   color: var(--color-gold);
   padding: 0.3rem 0.75rem;
   border: 1px solid rgba(196, 162, 77, 0.3);
-  border-radius: 4px;
+  border-radius: 50px;
   transition: all var(--transition);
 }
 
@@ -1418,6 +1418,157 @@ img {
 }
 
 /* ============================================
+   SCROLLING MARQUEE — pinned to hero bottom
+   ============================================ */
+
+.marquee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(26, 25, 22, 0.8);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.marquee__track {
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+  animation: marqueeScroll 20s linear infinite;
+  padding-right: 2rem;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__track span {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ============================================
+   SOCIAL PROOF
+   ============================================ */
+
+.proof {
+  background-color: var(--color-bg-alt);
+}
+
+.proof__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.proof__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.proof__card:hover {
+  border-color: rgba(45, 140, 78, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.proof__stars {
+  font-size: 1.3rem;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+  letter-spacing: 3px;
+}
+
+.proof__quote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.proof__author {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.proof__cta {
+  text-align: center;
+}
+
+/* ============================================
+   STICKY MOBILE ORDER BAR
+   ============================================ */
+
+.mobile-order {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0.75rem 1rem;
+  background: rgba(26, 25, 22, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid var(--italia-green);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.mobile-order.visible {
+  transform: translateY(0);
+}
+
+.mobile-order__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--italia-green), var(--color-green));
+  border-radius: 50px;
+  transition: all var(--transition);
+  box-shadow: 0 4px 15px rgba(45, 140, 78, 0.3);
+}
+
+.mobile-order__btn:hover {
+  color: var(--color-white);
+  box-shadow: 0 6px 25px rgba(45, 140, 78, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 
@@ -1481,5 +1632,20 @@ img {
   .menu__table th,
   .menu__table td {
     padding: 0.6rem 0.3rem;
+  }
+
+  /* Social proof stacks on mobile */
+  .proof__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Show sticky order bar on mobile */
+  .mobile-order {
+    display: block;
+  }
+
+  /* Add padding at bottom so sticky bar doesn't cover footer */
+  body {
+    padding-bottom: 70px;
   }
 }

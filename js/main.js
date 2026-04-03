@@ -88,6 +88,17 @@ document.querySelectorAll('.reveal, .reveal-children').forEach((el) => {
 });
 
 
+// ---- Sticky mobile order bar ----
+
+const mobileOrder = document.getElementById('mobile-order');
+
+if (mobileOrder) {
+  window.addEventListener('scroll', () => {
+    mobileOrder.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
+  }, { passive: true });
+}
+
+
 // ---- Subtle parallax on hero particles ----
 
 const heroParticles = document.querySelector('.hero__particles');
