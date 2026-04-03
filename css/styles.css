@@ -1442,7 +1442,7 @@ img {
   display: flex;
   gap: 2rem;
   flex-shrink: 0;
-  animation: marqueeScroll 20s linear infinite;
+  animation: marqueeScroll 40s linear infinite;
   padding-right: 2rem;
 }
 
