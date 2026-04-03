@@ -4,7 +4,7 @@ const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', () => {
   nav.classList.toggle('nav--scrolled', window.scrollY > 50);
-});
+}, { passive: true });
 
 
 // ---- Mobile menu toggle ----
@@ -16,7 +16,6 @@ navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile menu when a link is clicked
 navLinks.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {
     navLinks.classList.remove('open');
@@ -27,15 +26,15 @@ navLinks.addEventListener('click', (e) => {
 
 const rotatingEl = document.getElementById('hero-rotating');
 const phrases = [
-  "We don't cut corners — we cut pizza. 🍕",
+  "We don't cut corners — we cut pizza.",
   "Best slice in East New York. No debate.",
-  "If you know, you know. 🤌",
+  "If you know, you know.",
   "Come hungry, leave happy.",
   "Our dough is older than your playlist.",
   "Catch us on TikTok before we sell out.",
   "You had us at extra cheese.",
   "Warning: may cause extreme cravings.",
-  "Brooklyn born. Brooklyn fed. 🗽",
+  "Brooklyn born. Brooklyn fed.",
   "Grandma pie hits different on a Sunday.",
 ];
 
@@ -97,35 +96,3 @@ if (mobileOrder) {
     mobileOrder.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
   }, { passive: true });
 }
-
-
-// ---- Subtle parallax on hero particles ----
-
-const heroParticles = document.querySelector('.hero__particles');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY < window.innerHeight) {
-    const offset = window.scrollY * 0.3;
-    heroParticles.style.transform = `translateY(${offset}px)`;
-  }
-}, { passive: true });
-
-
-// ---- Fire-trail cursor effect (hero only) ----
-
-const hero = document.getElementById('hero');
-let lastEmber = 0;
-
-hero.addEventListener('mousemove', (e) => {
-  const now = Date.now();
-  if (now - lastEmber < 60) return; // throttle
-  lastEmber = now;
-
-  const ember = document.createElement('span');
-  ember.className = 'cursor-ember';
-  ember.style.left = e.clientX + 'px';
-  ember.style.top = e.clientY + 'px';
-  document.body.appendChild(ember);
-
-  setTimeout(() => ember.remove(), 800);
-});
