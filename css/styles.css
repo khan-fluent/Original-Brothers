@@ -317,8 +317,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.4) 100%),
-    linear-gradient(to bottom, transparent 0%, transparent 85%, var(--color-bg) 100%);
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.65) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 30%, transparent 75%, var(--color-bg) 100%);
   z-index: 0;
 }
 
@@ -333,8 +333,9 @@ img {
   font-size: 0.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--italia-red);
+  color: var(--color-gold);
   margin-bottom: var(--space-md);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero__title {
@@ -347,6 +348,7 @@ img {
   letter-spacing: -1px;
   position: relative;
   min-height: 2.2em;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Cycling title lines */
@@ -376,10 +378,11 @@ img {
 .hero__subtitle {
   font-size: 1.1rem;
   font-weight: 300;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   max-width: 450px;
   margin: 0 auto var(--space-md);
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Animated gradient line below subtitle */
@@ -399,17 +402,6 @@ img {
   50% { background-position: 100% 50%; }
 }
 
-/* Red brand stripe at very top of page */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--italia-green), var(--italia-red));
-  z-index: 1001;
-}
 
 .hero__rotating {
   font-family: var(--font-display);
@@ -1009,14 +1001,11 @@ body::before {
    ============================================ */
 
 .marquee {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 1;
-  background: rgba(20, 20, 19, 0.85);
-  backdrop-filter: blur(8px);
+  background: var(--color-bg-alt);
   border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   padding: 0.75rem 0;
   overflow: hidden;
   white-space: nowrap;
